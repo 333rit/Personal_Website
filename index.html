@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Personal Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 15px 40px;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4em;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .education-item, .experience-item {
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .education-item:hover, .experience-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item h3, .experience-item h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 8px;
+        }
+
+        .institution, .company {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .description li {
+            margin-bottom: 8px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 2px solid #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>John Doe</h1>
+            <p>Software Engineer | Web Developer | Problem Solver</p>
+        </header>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="profile-img">JD</div>
+                    <div class="about-text">
+                        <p>Hello! I'm a passionate software engineer with a strong foundation in computer science and a proven track record of delivering innovative solutions. I thrive on solving complex problems and creating efficient, scalable applications.</p>
+                        <p>My expertise spans across full-stack development, with a particular focus on modern web technologies. I'm committed to continuous learning and staying updated with the latest industry trends.</p>
+                        <div class="skills">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <h3>Master of Science in Computer Science</h3>
+                    <div class="institution">Stanford University</div>
+                    <div class="date">September 2019 - June 2021</div>
+                    <div class="description">
+                        <p>Specialized in Machine Learning and Artificial Intelligence. Completed thesis on "Neural Network Optimization for Real-Time Applications."</p>
+                        <ul>
+                            <li>GPA: 3.9/4.0</li>
+                            <li>Relevant Coursework: Advanced Algorithms, Machine Learning, Distributed Systems, Computer Vision</li>
+                            <li>Research Assistant at AI Lab</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Engineering</h3>
+                    <div class="institution">University of California, Berkeley</div>
+                    <div class="date">September 2015 - May 2019</div>
+                    <div class="description">
+                        <p>Graduated with honors. Strong foundation in computer systems, software engineering, and mathematics.</p>
+                        <ul>
+                            <li>GPA: 3.8/4.0</li>
+                            <li>Dean's List: All semesters</li>
+                            <li>Relevant Coursework: Data Structures, Operating Systems, Database Systems, Web Development</li>
+                            <li>Senior Project: Developed a mobile application for campus navigation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Professional Experience</h2>
+
+                <div class="experience-item">
+                    <h3>Senior Software Engineer</h3>
+                    <div class="company">Tech Innovations Inc.</div>
+                    <div class="date">July 2022 - Present</div>
+                    <div class="description">
+                        <p>Leading development of cloud-based enterprise solutions serving over 100,000 users.</p>
+                        <ul>
+                            <li>Architected and implemented microservices infrastructure reducing system latency by 40%</li>
+                            <li>Led a team of 5 developers in agile environment</li>
+                            <li>Mentored junior developers and conducted code reviews</li>
+                            <li>Implemented CI/CD pipelines improving deployment frequency by 60%</li>
+                            <li>Collaborated with product team to define technical requirements and roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Software Engineer</h3>
+                    <div class="company">Digital Solutions LLC</div>
+                    <div class="date">August 2021 - June 2022</div>
+                    <div class="description">
+                        <p>Developed and maintained full-stack web applications for various clients across different industries.</p>
+                        <ul>
+                            <li>Built responsive web applications using React, Node.js, and MongoDB</li>
+                            <li>Optimized database queries resulting in 50% faster load times</li>
+                            <li>Integrated third-party APIs and payment processing systems</li>
+                            <li>Participated in daily stand-ups and sprint planning meetings</li>
+                            <li>Wrote comprehensive unit and integration tests</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Software Engineering Intern</h3>
+                    <div class="company">StartUp Ventures</div>
+                    <div class="date">June 2020 - August 2020</div>
+                    <div class="description">
+                        <p>Contributed to the development of a social media analytics platform.</p>
+                        <ul>
+                            <li>Developed RESTful APIs using Python and Flask</li>
+                            <li>Implemented data visualization features using D3.js</li>
+                            <li>Collaborated with cross-functional team in agile environment</li>
+                            <li>Wrote technical documentation for API endpoints</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <a href="mailto:john.doe@email.com">john.doe@email.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>💼</span>
+                        <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>🐙</span>
+                        <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>(555) 123-4567</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 John Doe. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
