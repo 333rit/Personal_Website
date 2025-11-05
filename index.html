@@ -81,7 +81,8 @@
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
-            sticky: top 0;
+            position: sticky;
+            top: 0;
             z-index: 100;
         }
 
@@ -202,7 +203,7 @@
             font-weight: 600;
         }
 
-        .institution, .company {
+        .institution, .company, .School {
             color: #0ea5e9;
             font-weight: 600;
             font-size: 1.15em;
@@ -229,6 +230,16 @@
         .description li {
             margin-bottom: 10px;
             color: #cbd5e1;
+        }
+
+        .description a {
+            color: #0ea5e9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .description a:hover {
+            color: #8b5cf6;
         }
 
         .skills {
@@ -375,6 +386,7 @@
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -382,7 +394,7 @@
             <section id="about">
                 <h2>About Me</h2>
                 <div class="about-content">
-                    <div class="profile-img"></div>
+                    <div class="profile-img">SD</div>
                     <div class="about-text">
                         <p>Hello! I'm a Graduate student in Materials Science and Engineering. I am passionate about synthesis and characterization of electronic material with their application in interconnects, solar cells, transistors, and photodetectors.</p>
                         <div class="skills">
@@ -403,11 +415,11 @@
                     <div class="institution">Cornell University</div>
                     <div class="date">August 2024 - August 2026</div>
                     <div class="description">
-                        <p>Working on next generation interconnect beyond Cu using Atomic Layer Deposition (ALD) of delaofossite crystals."</p>
+                        <p>Working on next generation interconnect beyond Cu using Atomic Layer Deposition (ALD) of delafossite crystals.</p>
                         <ul>
                             <li>GPA: 4.0/4.0</li>
                             <li>Relevant Coursework: Nanofabrication and Characterization, Device Physics, Thin Films, Semiconductor Physics.</li>
-                           <li>Research Assistant at <a href="https://n2gem.engineering.cornell.edu/" target="_blank">Prof Nair's Lab</a></li>
+                            <li>Research Assistant at <a href="https://n2gem.engineering.cornell.edu/" target="_blank">Prof Nair's Lab</a></li>
                         </ul>
                     </div>
                 </div>
@@ -416,6 +428,7 @@
                     <h3>Bachelor of Technology in Metallurgical and Materials Engineering</h3>
                     <div class="institution">National Institute of Technology Karnataka, Surathkal</div>
                     <div class="date">September 2020 - May 2024</div>
+                    <div class="description">
                         <ul>
                             <li>GPA: 9.37/10.0</li>
                             <li>Relevant Coursework: Thermodynamics, Phase Diagrams, X-Ray Diffraction and Microscopy, Thin Films, Nanomaterials.</li>
@@ -430,76 +443,76 @@
 
                 <div class="experience-item">
                     <h3>Device Testing and Automation Engineer</h3>
-                    <div class="company"> <a href="https://www.soctera.com/" target="_blank">Soctera</a></div>
+                    <div class="company"><a href="https://www.soctera.com/" target="_blank">Soctera</a></div>
                     <div class="date">June 2025 - Current</div>
                     <div class="description">
                         <p>Streamline the electrical characterization workflow to minimize data collection, processing and analysis time.</p>
                         <ul>
-                            <li>Successfully developed a process flow in JMP for IV plotting and extraction of key parameters such as ON/OFF ratio,
-                                threshold voltage, reducing analysis time by 30% and enabling high-throughput analysis of high electron mobility
-                                transistors and transfer Length Method data. Prepared technical report for effective internal team communication.</li>
+                            <li>Successfully developed a process flow in JMP for IV plotting and extraction of key parameters such as ON/OFF ratio, threshold voltage, reducing analysis time by 30% and enabling high-throughput analysis of high electron mobility transistors and transfer Length Method data. Prepared technical report for effective internal team communication.</li>
                             <li>Developing electrical test protocols to optimize test time and data volume for increased throughput of R&D fab line.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="experience-item">
-                    <h3> Pulse Laser Deposition of HfO<sub>2</sub>- CeO<sub>2</sub> heterostructures</h3>
+                    <h3>Pulse Laser Deposition of HfO<sub>2</sub>-CeO<sub>2</sub> heterostructures</h3>
                     <div class="company">Indian Institute of Science</div>
-                    <div class="date">May 2025 - July 2024</div>
+                    <div class="date">May 2023 - July 2024</div>
                     <div class="description">
-                        <p>Fabricated HfO2- CeO2 heterostructure to stabilize ferroelectric phase.</p>
+                        <p>Fabricated HfO<sub>2</sub>-CeO<sub>2</sub> heterostructure to stabilize ferroelectric phase.</p>
                         <ul>
-                            <li>Prepared PLD targets and obtained growth rates to design experiments for HfO<sub>2</sub>- CeO<sub>2</sub> heterostructures.</li>
-                            <li>Characterization: Thickness measurement with XRR, insitu RHEED for growth mode, and phase formation from XRD.</li>
+                            <li>Prepared PLD targets and obtained growth rates to design experiments for HfO<sub>2</sub>-CeO<sub>2</sub> heterostructures.</li>
+                            <li>Characterization: Thickness measurement with XRR, in-situ RHEED for growth mode, and phase formation from XRD.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="experience-item">
-                    <h3>MITACS Globalink Research Intern </h3>
+                    <h3>MITACS Globalink Research Intern</h3>
                     <div class="School">McMaster University</div>
                     <div class="date">May 2023 - July 2023</div>
                     <div class="description">
                         <p>Evaluated Si photodetectors as CMOS-compatible alternatives to III-V materials for integrated photonic circuit.</p>
                         <ul>
-                            <li> Characterized (Subwavelngth gratings (SWGs) with transmission studies and silicon photodetectors with probe station
-                                 to check its responsivity under dark and light condition (I-V Measurement) in the presence and absence of SWGs.</li>
-                            <li>Sucessfully validated that SWGs photodiodes showed 20% higher photo current compared to non SWGs phototdiodes.</li>
+                            <li>Characterized Subwavelength gratings (SWGs) with transmission studies and silicon photodetectors with probe station to check its responsivity under dark and light condition (I-V Measurement) in the presence and absence of SWGs.</li>
+                            <li>Successfully validated that SWGs photodiodes showed 20% higher photo current compared to non-SWG photodiodes.</li>
                         </ul>
                     </div>
                 </div>
-
             </section>
 
-            <h2>Projects</h2>
+            <section id="projects">
+                <h2>Projects</h2>
                 
-                <!-- <div class="experience-item">
+                <!-- Uncomment below to add projects
+                <div class="experience-item">
                     <h3>NAND Fabrication Process Review</h3>
                     <div class="date">August 2024 - December 2024</div>
                     <div class="description">
-                        <p>Researched the fabrication process of NAND memories. Reported detaied study on the defects and the fabrication advancements.</p>
+                        <p>Researched the fabrication process of NAND memories. Reported detailed study on the defects and the fabrication advancements.</p>
                         <div class="skills">
                             <a href="https://example.com/poster.pdf" target="_blank" class="poster-link">📄 View Project Poster</a>
                             <a href="https://github.com/johndoe/ml-classifier" target="_blank" class="poster-link">🔗 GitHub Repository</a>
                         </div>
                     </div>
-                </div> -->
+                </div>
+                -->
+            </section>
 
             <section id="contact">
                 <h2>Contact</h2>
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📧</span>
-                        <a href="mailto:sukritdasstm@email.com">sukritdasstm@gmail.com</a>
+                        <a href="mailto:sukritdasstm@gmail.com">sukritdasstm@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <span>💼</span>
-                        <a href=https://www.linkedin.com/in/sukrit-dass" target="_blank">https://www.linkedin.com/in/sukrit-dass/</a>
+                        <a href="https://www.linkedin.com/in/sukrit-dass" target="_blank">linkedin.com/in/sukrit-dass</a>
                     </div>
                     <div class="contact-item">
                         <span>🐙</span>
-                        <a href="https://github.com/333rit" target="_blank">https://github.com/333rit</a>
+                        <a href="https://github.com/333rit" target="_blank">github.com/333rit</a>
                     </div>
                     <div class="contact-item">
                         <span>📱</span>
@@ -509,6 +522,9 @@
             </section>
         </div>
 
+        <footer>
+            <p>&copy; 2025 Sukrit Dass Thirukonda Muralidoss. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
