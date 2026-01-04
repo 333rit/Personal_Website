@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title - SDTM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.8;
+            color: #e0e0e0;
+            background: #0a0a0a;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
+            padding: 40px;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+        }
+
+        .back-link {
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #8b5cf6;
+        }
+
+        .article-header {
+            margin-top: 20px;
+        }
+
+        .article-title {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 25px;
+            color: #94a3b8;
+            font-size: 1em;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-content {
+            padding: 60px 40px;
+            background: linear-gradient(180deg, #1a1a2e 0%, #0f172a 100%);
+        }
+
+        .article-content h2 {
+            color: #0ea5e9;
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .article-content h3 {
+            color: #8b5cf6;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .article-content p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.9;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+            color: #cbd5e1;
+        }
+
+        .article-content li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .article-content code {
+            background: rgba(15, 52, 96, 0.6);
+            padding: 3px 8px;
+            border-radius: 4px;
+            color: #0ea5e9;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .article-content pre {
+            background: rgba(15, 52, 96, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+
+        .article-content pre code {
+            background: none;
+            padding: 0;
+            color: #cbd5e1;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid #0ea5e9;
+            padding-left: 20px;
+            margin: 25px 0;
+            color: #94a3b8;
+            font-style: italic;
+            background: rgba(15, 52, 96, 0.3);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .article-content a {
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .article-content a:hover {
+            color: #8b5cf6;
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(14, 165, 233, 0.2);
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+            border-top: 1px solid rgba(14, 165, 233, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2em;
+            }
+
+            .article-content {
+                padding: 40px 20px;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            .article-meta {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">← Back to Main Page</a>
+            <div class="article-header">
+                <h1 class="article-title">[ARTICLE TITLE: Replace with your article title]</h1>
+                <div class="article-meta">
+                    <span>📅 [DATE: e.g., January 5, 2025]</span>
+                    <span>⏱️ [READING TIME: e.g., 5 min read]</span>
+                    <span>✍️ Sukrit Dass TM</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <!-- Introduction -->
+            <p>[INTRODUCTION: Write an engaging introduction that hooks the reader and provides context for your article. Explain why this topic matters and what readers will learn.]</p>
+
+            <!-- Main Section 1 -->
+            <h2>[SECTION 1 HEADING: Replace with your first main section heading]</h2>
+            <p>[SECTION 1 CONTENT: Write your content here. You can use multiple paragraphs to explain concepts clearly.]</p>
+            
+            <p>[Additional paragraph if needed. Break down complex ideas into digestible chunks.]</p>
+
+            <!-- Highlight Box Example -->
+            <div class="highlight-box">
+                <strong>💡 Key Insight:</strong> [HIGHLIGHT: Use this box to emphasize important points, definitions, or key takeaways that you want readers to remember.]
+            </div>
+
+            <!-- Main Section 2 -->
+            <h2>[SECTION 2 HEADING: Your second main section]</h2>
+            <p>[SECTION 2 CONTENT: Continue your article with the next major topic or subtopic.]</p>
+
+            <!-- Subsection Example -->
+            <h3>[SUBSECTION HEADING: A more specific topic within Section 2]</h3>
+            <p>[SUBSECTION CONTENT: Provide detailed information about this subtopic.]</p>
+
+            <!-- List Example -->
+            <h3>[LIST HEADING: When you need to present multiple points]</h3>
+            <ul>
+                <li>[POINT 1: First item in your list]</li>
+                <li>[POINT 2: Second item]</li>
+                <li>[POINT 3: Third item]</li>
+                <li>[Add more points as needed]</li>
+            </ul>
+
+            <!-- Code Example (if applicable) -->
+            <h3>[CODE HEADING: If your article includes technical content]</h3>
+            <p>[Explanation before code]</p>
+            <pre><code>[CODE BLOCK: 
+Replace with your code, equations, or technical content
+Line 2
+Line 3]</code></pre>
+
+            <!-- Quote Example -->
+            <blockquote>
+                [QUOTE: Use this for important quotes, definitions from literature, or emphasized statements. Include attribution if quoting someone else.]
+            </blockquote>
+
+            <!-- Main Section 3 -->
+            <h2>[SECTION 3 HEADING: Your third major topic]</h2>
+            <p>[SECTION 3 CONTENT: Continue building your article with additional sections as needed.]</p>
+
+            <!-- Applications/Implications -->
+            <h2>[APPLICATIONS HEADING: Real-world applications or implications]</h2>
+            <p>[Discuss practical applications, real-world examples, or implications of the topic you're discussing.]</p>
+
+            <ol>
+                <li><strong>[Application 1]:</strong> [Description of first application]</li>
+                <li><strong>[Application 2]:</strong> [Description of second application]</li>
+                <li><strong>[Application 3]:</strong> [Description of third application]</li>
+            </ol>
+
+            <!-- Challenges/Future Directions -->
+            <h2>[CHALLENGES HEADING: Current challenges or future directions]</h2>
+            <p>[Discuss current limitations, challenges, or future research directions in this field.]</p>
+
+            <!-- Conclusion -->
+            <h2>Conclusion</h2>
+            <p>[CONCLUSION: Summarize the key points of your article. Reinforce the main takeaways and perhaps suggest next steps or further reading for interested readers.]</p>
+
+            <!-- References (Optional) -->
+            <h2>References</h2>
+            <ol>
+                <li>[Reference 1: Author, Title, Journal/Source, Year]</li>
+                <li>[Reference 2: Add your references here]</li>
+                <li>[Reference 3: Include DOI or URL if available]</li>
+            </ol>
+
+            <!-- Tags -->
+            <div class="tags">
+                <span class="tag">[TAG1: e.g., Materials Science]</span>
+                <span class="tag">[TAG2: e.g., Nanotechnology]</span>
+                <span class="tag">[TAG3: e.g., ALD]</span>
+                <span class="tag">[TAG4: Add relevant tags]</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Sukrit Dass Thirukonda Muralidoss. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
