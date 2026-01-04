@@ -64,14 +64,6 @@
             background-clip: text;
         }
 
-        header p {
-            font-size: 1.3em;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-            color: #94a3b8;
-        }
-
         nav {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(10px);
@@ -266,23 +258,63 @@
             box-shadow: 0 6px 15px rgba(139, 92, 246, 0.4);
         }
 
-        .poster-link {
-            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.95em;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+        /* Article Cards */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
         }
 
-        .poster-link:hover {
-            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+        .article-card {
+            background: linear-gradient(135deg, rgba(15, 52, 96, 0.6) 0%, rgba(22, 33, 62, 0.4) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .article-card h3 {
+            color: #f1f5f9;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 12px;
+            font-size: 0.9em;
+            color: #94a3b8;
+        }
+
+        .article-excerpt {
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #0ea5e9;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more:hover {
+            color: #8b5cf6;
         }
 
         .contact-info {
@@ -342,10 +374,6 @@
                 font-size: 2.5em;
             }
 
-            header p {
-                font-size: 1.1em;
-            }
-
             nav {
                 gap: 20px;
                 padding: 15px 20px;
@@ -373,6 +401,10 @@
             .education-item, .experience-item {
                 padding: 20px;
             }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -387,6 +419,7 @@
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#articles">Articles</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -483,20 +516,48 @@
 
             <section id="projects">
                 <h2>Projects</h2>
-                
-                <!-- Uncomment below to add projects
-                <div class="experience-item">
-                    <h3>NAND Fabrication Process Review</h3>
-                    <div class="date">August 2024 - December 2024</div>
-                    <div class="description">
-                        <p>Researched the fabrication process of NAND memories. Reported detailed study on the defects and the fabrication advancements.</p>
-                        <div class="skills">
-                            <a href="https://example.com/poster.pdf" target="_blank" class="poster-link">📄 View Project Poster</a>
-                            <a href="https://github.com/johndoe/ml-classifier" target="_blank" class="poster-link">🔗 GitHub Repository</a>
+                <p style="color: #cbd5e1; text-align: center;">Coming soon...</p>
+            </section>
+
+            <section id="articles">
+                <h2>Articles</h2>
+                <div class="articles-grid">
+                    <a href="article1.html" class="article-card">
+                        <h3>Understanding Atomic Layer Deposition</h3>
+                        <div class="article-meta">
+                            <span>📅 January 5, 2025</span>
+                            <span>⏱️ 5 min read</span>
                         </div>
-                    </div>
+                        <p class="article-excerpt">
+                            An in-depth exploration of Atomic Layer Deposition (ALD) techniques and their applications in modern semiconductor manufacturing. Learn about the principles, advantages, and future prospects of this critical technology.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </a>
+
+                    <a href="article2.html" class="article-card">
+                        <h3>Delafossite Crystals in Electronics</h3>
+                        <div class="article-meta">
+                            <span>📅 December 20, 2024</span>
+                            <span>⏱️ 7 min read</span>
+                        </div>
+                        <p class="article-excerpt">
+                            Discover the potential of delafossite crystal structures in next-generation electronic applications. This article covers their unique properties and why they're considered for future interconnect technologies.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </a>
+
+                    <a href="article3.html" class="article-card">
+                        <h3>XPS Analysis: A Practical Guide</h3>
+                        <div class="article-meta">
+                            <span>📅 November 15, 2024</span>
+                            <span>⏱️ 6 min read</span>
+                        </div>
+                        <p class="article-excerpt">
+                            A comprehensive guide to X-ray Photoelectron Spectroscopy (XPS) for materials characterization. Learn about sample preparation, data collection, and interpretation techniques.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </a>
                 </div>
-                -->
             </section>
 
             <section id="contact">
