@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Title - SDTM</title>
+    <title>Article Title – SDTM</title>
+
     <style>
+        /* ---------- Base Reset ---------- */
         * {
             margin: 0;
             padding: 0;
@@ -12,269 +14,240 @@
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #000;
+            color: #fff;
             line-height: 1.8;
-            color: #1a1a1a;
-            background: #ffffff;
-            min-height: 100vh;
-            padding: 0;
         }
 
+        /* ---------- Layout ---------- */
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
-            background: #ffffff;
-            min-height: 100vh;
+            padding: 60px 20px;
         }
 
         header {
-            background: #000000;
-            padding: 60px 40px;
-            border-bottom: 3px solid #000000;
+            margin-bottom: 60px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
         }
 
-        .article-header {
-        }
-
-        .article-title {
-            font-size: 3em;
-            margin-bottom: 20px;
+        /* ---------- Typography ---------- */
+        h1 {
+            font-size: 2.6rem;
             font-weight: 700;
-            color: #ffffff;
-            line-height: 1.2;
-            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
         }
 
-        .article-meta {
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            color: #e5e5e5;
+        }
+
+        /* ---------- Meta ---------- */
+        .meta {
+            font-size: 0.9rem;
+            color: #aaa;
             display: flex;
             gap: 20px;
-            color: #cccccc;
-            font-size: 0.95em;
             flex-wrap: wrap;
-            font-family: 'Arial', sans-serif;
         }
 
-        .article-meta span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .article-content {
-            padding: 60px 40px 80px;
-            background: #ffffff;
-        }
-
-        .article-content h2 {
-            color: #000000;
-            font-size: 2em;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            font-weight: 700;
-            font-family: 'Georgia', serif;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #000000;
-        }
-
-        .article-content h3 {
-            color: #333333;
-            font-size: 1.4em;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-weight: 600;
-            font-family: 'Georgia', serif;
-        }
-
-        .article-content p {
-            color: #333333;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-            line-height: 1.9;
-            text-align: justify;
-        }
-
-        .article-content ul, .article-content ol {
-            margin-left: 40px;
+        /* ---------- Content Elements ---------- */
+        ul, ol {
+            margin-left: 25px;
             margin-bottom: 25px;
-            color: #333333;
         }
 
-        .article-content li {
-            margin-bottom: 12px;
-            font-size: 1.05em;
-            line-height: 1.8;
+        li {
+            margin-bottom: 10px;
+            color: #e5e5e5;
         }
 
-        .article-content code {
-            background: #f5f5f5;
-            padding: 3px 8px;
-            border-radius: 3px;
-            color: #000000;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95em;
-            border: 1px solid #e0e0e0;
+        blockquote {
+            border-left: 3px solid #fff;
+            padding-left: 20px;
+            margin: 30px 0;
+            color: #ccc;
+            font-style: italic;
         }
 
-        .article-content pre {
-            background: #f5f5f5;
-            padding: 25px;
-            border-radius: 0;
+        code {
+            font-family: "Courier New", monospace;
+            background: #111;
+            padding: 3px 6px;
+            font-size: 0.95rem;
+        }
+
+        pre {
+            background: #111;
+            padding: 20px;
             overflow-x: auto;
             margin: 30px 0;
-            border-left: 4px solid #000000;
-            border-right: 1px solid #e0e0e0;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.95rem;
         }
 
-        .article-content pre code {
+        pre code {
             background: none;
             padding: 0;
-            color: #1a1a1a;
-            border: none;
-            font-size: 0.9em;
         }
 
-        .article-content blockquote {
-            border-left: 5px solid #000000;
-            padding-left: 25px;
-            margin: 30px 0;
-            color: #4a4a4a;
-            font-style: italic;
-            background: #fafafa;
-            padding: 20px 25px;
-            font-size: 1.15em;
-        }
-
-        .article-content img {
+        img {
             max-width: 100%;
-            height: auto;
             margin: 30px 0;
-            border: 1px solid #e0e0e0;
         }
 
-        .article-content a {
-            color: #000000;
+        a {
+            color: #fff;
             text-decoration: underline;
-            font-weight: 600;
-            transition: color 0.3s ease;
         }
 
-        .article-content a:hover {
-            color: #666666;
+        a:hover {
+            opacity: 0.7;
         }
 
-        .highlight-box {
-            background: #f5f5f5;
-            border: 2px solid #000000;
-            padding: 25px;
-            margin: 30px 0;
-            font-size: 1.05em;
+        /* ---------- Highlight Box ---------- */
+        .highlight {
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 40px 0;
+            font-size: 1rem;
+            background: #050505;
         }
 
-        .highlight-box strong {
-            font-size: 1.1em;
-            display: block;
-            margin-bottom: 10px;
-        }
-
+        /* ---------- Tags ---------- */
         .tags {
+            margin-top: 60px;
             display: flex;
+            gap: 10px;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #e0e0e0;
         }
 
         .tag {
-            background: #000000;
-            color: #ffffff;
-            padding: 8px 18px;
-            font-size: 0.85em;
-            font-weight: 600;
-            font-family: 'Arial', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            border: 1px solid #444;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            color: #ddd;
         }
 
+        /* ---------- Footer ---------- */
         footer {
-            background: #000000;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
             text-align: center;
-            padding: 40px;
-            color: #ffffff;
-            font-family: 'Arial', sans-serif;
-            font-size: 0.9em;
+            font-size: 0.85rem;
+            color: #888;
         }
 
-        @media (max-width: 768px) {
-            .article-title {
-                font-size: 2.2em;
+        /* ---------- Mobile ---------- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
             }
 
-            .article-content {
-                padding: 40px 25px 60px;
-            }
-
-            header {
-                padding: 40px 25px;
-            }
-
-            .article-meta {
-                font-size: 0.85em;
-            }
-
-            .article-content h2 {
-                font-size: 1.7em;
-            }
-
-            .article-content h3 {
-                font-size: 1.3em;
-            }
-
-            .article-content p {
-                font-size: 1.05em;
+            h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <div class="article-header">
-                <h1 class="article-title">[ARTICLE TITLE: Replace with your article title]</h1>
-                <div class="article-meta">
-                    <span>📅 [DATE: e.g., January 5, 2025]</span>
-                    <span>⏱️ [READING TIME: e.g., 5 min read]</span>
-                    <span>✍️ Sukrit Dass TM</span>
-                </div>
-            </div>
-        </header>
 
-        <div class="article-content">
-            <!-- Your article content goes here -->
-            <p>[INTRODUCTION]</p>
+<div class="container">
 
-            <h2>[SECTION HEADING]</h2>
-            <p>[CONTENT]</p>
+    <header>
+        <h1>[Article Title]</h1>
+        <div class="meta">
+            <span>[Date]</span>
+            <span>[Reading Time]</span>
+            <span>Sukrit Dass TM</span>
+        </div>
+    </header>
 
-            <div class="highlight-box">
-                <strong>💡 KEY INSIGHT</strong>
-                [Highlight text]
-            </div>
+    <main>
 
-            <!-- Add more sections as needed -->
+        <p>
+            [Introduction paragraph. Clearly state the motivation and what the reader will gain.]
+        </p>
 
-            <div class="tags">
-                <span class="tag">TAG1</span>
-                <span class="tag">TAG2</span>
-                <span class="tag">TAG3</span>
-            </div>
+        <h2>Section One</h2>
+        <p>
+            [Explain the core concept in a clear, structured way.]
+        </p>
+
+        <div class="highlight">
+            <strong>Key Insight:</strong> [Short, high-impact takeaway.]
         </div>
 
-        <footer>
-            <p>&copy; 2025 Sukrit Dass Thirukonda Muralidoss. All rights reserved.</p>
-        </footer>
-    </div>
+        <h2>Section Two</h2>
+        <h3>Subsection</h3>
+        <p>
+            [More detailed explanation.]
+        </p>
+
+        <ul>
+            <li>Point one</li>
+            <li>Point two</li>
+            <li>Point three</li>
+        </ul>
+
+        <pre><code>
+Example code or equations
+Line 2
+Line 3
+        </code></pre>
+
+        <blockquote>
+            [Important quote or definition.]
+        </blockquote>
+
+        <h2>Applications</h2>
+        <ol>
+            <li><strong>Application 1:</strong> Description</li>
+            <li><strong>Application 2:</strong> Description</li>
+        </ol>
+
+        <h2>Conclusion</h2>
+        <p>
+            [Summarize and close strongly.]
+        </p>
+
+        <h2>References</h2>
+        <ol>
+            <li>Author, Title, Journal, Year</li>
+        </ol>
+
+        <div class="tags">
+            <span class="tag">Materials Science</span>
+            <span class="tag">Semiconductors</span>
+            <span class="tag">ALD</span>
+        </div>
+
+    </main>
+
+    <footer>
+        © 2025 Sukrit Dass Thirukonda Muralidoss
+    </footer>
+
+</div>
+
 </body>
 </html>
