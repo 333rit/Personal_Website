@@ -12,64 +12,46 @@
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.8;
-            color: #e0e0e0;
-            background: #0a0a0a;
+            color: #1a1a1a;
+            background: #ffffff;
             min-height: 100vh;
             padding: 0;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            background: #ffffff;
             min-height: 100vh;
         }
 
         header {
-            background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
-            padding: 40px;
-            border-bottom: 1px solid rgba(14, 165, 233, 0.2);
-        }
-
-        .back-link {
-            color: #0ea5e9;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            transition: color 0.3s ease;
-        }
-
-        .back-link:hover {
-            color: #8b5cf6;
+            background: #000000;
+            padding: 60px 40px;
+            border-bottom: 3px solid #000000;
         }
 
         .article-header {
-            margin-top: 20px;
         }
 
         .article-title {
-            font-size: 2.8em;
+            font-size: 3em;
             margin-bottom: 20px;
             font-weight: 700;
-            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
             line-height: 1.2;
+            font-family: 'Georgia', serif;
         }
 
         .article-meta {
             display: flex;
-            gap: 25px;
-            color: #94a3b8;
-            font-size: 1em;
+            gap: 20px;
+            color: #cccccc;
+            font-size: 0.95em;
             flex-wrap: wrap;
+            font-family: 'Arial', sans-serif;
         }
 
         .article-meta span {
@@ -79,148 +61,179 @@
         }
 
         .article-content {
-            padding: 60px 40px;
-            background: linear-gradient(180deg, #1a1a2e 0%, #0f172a 100%);
+            padding: 60px 40px 80px;
+            background: #ffffff;
         }
 
         .article-content h2 {
-            color: #0ea5e9;
+            color: #000000;
             font-size: 2em;
-            margin-top: 40px;
+            margin-top: 50px;
             margin-bottom: 20px;
             font-weight: 700;
+            font-family: 'Georgia', serif;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000000;
         }
 
         .article-content h3 {
-            color: #8b5cf6;
-            font-size: 1.5em;
-            margin-top: 30px;
+            color: #333333;
+            font-size: 1.4em;
+            margin-top: 35px;
             margin-bottom: 15px;
             font-weight: 600;
+            font-family: 'Georgia', serif;
         }
 
         .article-content p {
-            color: #cbd5e1;
+            color: #333333;
             margin-bottom: 20px;
             font-size: 1.1em;
             line-height: 1.9;
+            text-align: justify;
         }
 
         .article-content ul, .article-content ol {
-            margin-left: 30px;
-            margin-bottom: 20px;
-            color: #cbd5e1;
+            margin-left: 40px;
+            margin-bottom: 25px;
+            color: #333333;
         }
 
         .article-content li {
             margin-bottom: 12px;
             font-size: 1.05em;
+            line-height: 1.8;
         }
 
         .article-content code {
-            background: rgba(15, 52, 96, 0.6);
+            background: #f5f5f5;
             padding: 3px 8px;
-            border-radius: 4px;
-            color: #0ea5e9;
+            border-radius: 3px;
+            color: #000000;
             font-family: 'Courier New', monospace;
             font-size: 0.95em;
+            border: 1px solid #e0e0e0;
         }
 
         .article-content pre {
-            background: rgba(15, 52, 96, 0.6);
-            padding: 20px;
-            border-radius: 8px;
+            background: #f5f5f5;
+            padding: 25px;
+            border-radius: 0;
             overflow-x: auto;
-            margin-bottom: 20px;
-            border: 1px solid rgba(14, 165, 233, 0.2);
+            margin: 30px 0;
+            border-left: 4px solid #000000;
+            border-right: 1px solid #e0e0e0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .article-content pre code {
             background: none;
             padding: 0;
-            color: #cbd5e1;
+            color: #1a1a1a;
+            border: none;
+            font-size: 0.9em;
         }
 
         .article-content blockquote {
-            border-left: 4px solid #0ea5e9;
-            padding-left: 20px;
-            margin: 25px 0;
-            color: #94a3b8;
+            border-left: 5px solid #000000;
+            padding-left: 25px;
+            margin: 30px 0;
+            color: #4a4a4a;
             font-style: italic;
-            background: rgba(15, 52, 96, 0.3);
-            padding: 15px 20px;
-            border-radius: 0 8px 8px 0;
+            background: #fafafa;
+            padding: 20px 25px;
+            font-size: 1.15em;
         }
 
         .article-content img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin: 25px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin: 30px 0;
+            border: 1px solid #e0e0e0;
         }
 
         .article-content a {
-            color: #0ea5e9;
-            text-decoration: none;
+            color: #000000;
+            text-decoration: underline;
             font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .article-content a:hover {
-            color: #8b5cf6;
-            text-decoration: underline;
+            color: #666666;
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
+            background: #f5f5f5;
+            border: 2px solid #000000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 1.05em;
+        }
+
+        .highlight-box strong {
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 40px;
+            gap: 12px;
+            margin-top: 50px;
             padding-top: 30px;
-            border-top: 1px solid rgba(14, 165, 233, 0.2);
+            border-top: 2px solid #e0e0e0;
         }
 
         .tag {
-            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
+            background: #000000;
+            color: #ffffff;
+            padding: 8px 18px;
+            font-size: 0.85em;
             font-weight: 600;
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         footer {
-            background: rgba(15, 23, 42, 0.9);
+            background: #000000;
             text-align: center;
-            padding: 30px;
-            color: #94a3b8;
-            border-top: 1px solid rgba(14, 165, 233, 0.2);
+            padding: 40px;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9em;
         }
 
         @media (max-width: 768px) {
             .article-title {
-                font-size: 2em;
+                font-size: 2.2em;
             }
 
             .article-content {
-                padding: 40px 20px;
+                padding: 40px 25px 60px;
             }
 
             header {
-                padding: 20px;
+                padding: 40px 25px;
             }
 
             .article-meta {
-                font-size: 0.9em;
+                font-size: 0.85em;
+            }
+
+            .article-content h2 {
+                font-size: 1.7em;
+            }
+
+            .article-content h3 {
+                font-size: 1.3em;
+            }
+
+            .article-content p {
+                font-size: 1.05em;
             }
         }
     </style>
@@ -228,7 +241,6 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-link">← Back to Main Page</a>
             <div class="article-header">
                 <h1 class="article-title">[ARTICLE TITLE: Replace with your article title]</h1>
                 <div class="article-meta">
@@ -240,86 +252,23 @@
         </header>
 
         <div class="article-content">
-            <!-- Introduction -->
-            <p>[INTRODUCTION: Write an engaging introduction that hooks the reader and provides context for your article. Explain why this topic matters and what readers will learn.]</p>
+            <!-- Your article content goes here -->
+            <p>[INTRODUCTION]</p>
 
-            <!-- Main Section 1 -->
-            <h2>[SECTION 1 HEADING: Replace with your first main section heading]</h2>
-            <p>[SECTION 1 CONTENT: Write your content here. You can use multiple paragraphs to explain concepts clearly.]</p>
-            
-            <p>[Additional paragraph if needed. Break down complex ideas into digestible chunks.]</p>
+            <h2>[SECTION HEADING]</h2>
+            <p>[CONTENT]</p>
 
-            <!-- Highlight Box Example -->
             <div class="highlight-box">
-                <strong>💡 Key Insight:</strong> [HIGHLIGHT: Use this box to emphasize important points, definitions, or key takeaways that you want readers to remember.]
+                <strong>💡 KEY INSIGHT</strong>
+                [Highlight text]
             </div>
 
-            <!-- Main Section 2 -->
-            <h2>[SECTION 2 HEADING: Your second main section]</h2>
-            <p>[SECTION 2 CONTENT: Continue your article with the next major topic or subtopic.]</p>
+            <!-- Add more sections as needed -->
 
-            <!-- Subsection Example -->
-            <h3>[SUBSECTION HEADING: A more specific topic within Section 2]</h3>
-            <p>[SUBSECTION CONTENT: Provide detailed information about this subtopic.]</p>
-
-            <!-- List Example -->
-            <h3>[LIST HEADING: When you need to present multiple points]</h3>
-            <ul>
-                <li>[POINT 1: First item in your list]</li>
-                <li>[POINT 2: Second item]</li>
-                <li>[POINT 3: Third item]</li>
-                <li>[Add more points as needed]</li>
-            </ul>
-
-            <!-- Code Example (if applicable) -->
-            <h3>[CODE HEADING: If your article includes technical content]</h3>
-            <p>[Explanation before code]</p>
-            <pre><code>[CODE BLOCK: 
-Replace with your code, equations, or technical content
-Line 2
-Line 3]</code></pre>
-
-            <!-- Quote Example -->
-            <blockquote>
-                [QUOTE: Use this for important quotes, definitions from literature, or emphasized statements. Include attribution if quoting someone else.]
-            </blockquote>
-
-            <!-- Main Section 3 -->
-            <h2>[SECTION 3 HEADING: Your third major topic]</h2>
-            <p>[SECTION 3 CONTENT: Continue building your article with additional sections as needed.]</p>
-
-            <!-- Applications/Implications -->
-            <h2>[APPLICATIONS HEADING: Real-world applications or implications]</h2>
-            <p>[Discuss practical applications, real-world examples, or implications of the topic you're discussing.]</p>
-
-            <ol>
-                <li><strong>[Application 1]:</strong> [Description of first application]</li>
-                <li><strong>[Application 2]:</strong> [Description of second application]</li>
-                <li><strong>[Application 3]:</strong> [Description of third application]</li>
-            </ol>
-
-            <!-- Challenges/Future Directions -->
-            <h2>[CHALLENGES HEADING: Current challenges or future directions]</h2>
-            <p>[Discuss current limitations, challenges, or future research directions in this field.]</p>
-
-            <!-- Conclusion -->
-            <h2>Conclusion</h2>
-            <p>[CONCLUSION: Summarize the key points of your article. Reinforce the main takeaways and perhaps suggest next steps or further reading for interested readers.]</p>
-
-            <!-- References (Optional) -->
-            <h2>References</h2>
-            <ol>
-                <li>[Reference 1: Author, Title, Journal/Source, Year]</li>
-                <li>[Reference 2: Add your references here]</li>
-                <li>[Reference 3: Include DOI or URL if available]</li>
-            </ol>
-
-            <!-- Tags -->
             <div class="tags">
-                <span class="tag">[TAG1: e.g., Materials Science]</span>
-                <span class="tag">[TAG2: e.g., Nanotechnology]</span>
-                <span class="tag">[TAG3: e.g., ALD]</span>
-                <span class="tag">[TAG4: Add relevant tags]</span>
+                <span class="tag">TAG1</span>
+                <span class="tag">TAG2</span>
+                <span class="tag">TAG3</span>
             </div>
         </div>
 
