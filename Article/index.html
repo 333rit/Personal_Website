@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title - SDTM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #ffffff;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #000000;
+            padding: 60px 40px;
+            border-bottom: 3px solid #000000;
+        }
+
+        .article-header {
+        }
+
+        .article-title {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.2;
+            font-family: 'Georgia', serif;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: #cccccc;
+            font-size: 0.95em;
+            flex-wrap: wrap;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-content {
+            padding: 60px 40px 80px;
+            background: #ffffff;
+        }
+
+        .article-content h2 {
+            color: #000000;
+            font-size: 2em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-family: 'Georgia', serif;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000000;
+        }
+
+        .article-content h3 {
+            color: #333333;
+            font-size: 1.4em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-family: 'Georgia', serif;
+        }
+
+        .article-content p {
+            color: #333333;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-left: 40px;
+            margin-bottom: 25px;
+            color: #333333;
+        }
+
+        .article-content li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        .article-content code {
+            background: #f5f5f5;
+            padding: 3px 8px;
+            border-radius: 3px;
+            color: #000000;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            border: 1px solid #e0e0e0;
+        }
+
+        .article-content pre {
+            background: #f5f5f5;
+            padding: 25px;
+            border-radius: 0;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 4px solid #000000;
+            border-right: 1px solid #e0e0e0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .article-content pre code {
+            background: none;
+            padding: 0;
+            color: #1a1a1a;
+            border: none;
+            font-size: 0.9em;
+        }
+
+        .article-content blockquote {
+            border-left: 5px solid #000000;
+            padding-left: 25px;
+            margin: 30px 0;
+            color: #4a4a4a;
+            font-style: italic;
+            background: #fafafa;
+            padding: 20px 25px;
+            font-size: 1.15em;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 30px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .article-content a {
+            color: #000000;
+            text-decoration: underline;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .article-content a:hover {
+            color: #666666;
+        }
+
+        .highlight-box {
+            background: #f5f5f5;
+            border: 2px solid #000000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 1.05em;
+        }
+
+        .highlight-box strong {
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .tag {
+            background: #000000;
+            color: #ffffff;
+            padding: 8px 18px;
+            font-size: 0.85em;
+            font-weight: 600;
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            background: #000000;
+            text-align: center;
+            padding: 40px;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2.2em;
+            }
+
+            .article-content {
+                padding: 40px 25px 60px;
+            }
+
+            header {
+                padding: 40px 25px;
+            }
+
+            .article-meta {
+                font-size: 0.85em;
+            }
+
+            .article-content h2 {
+                font-size: 1.7em;
+            }
+
+            .article-content h3 {
+                font-size: 1.3em;
+            }
+
+            .article-content p {
+                font-size: 1.05em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="article-header">
+                <h1 class="article-title">[ARTICLE TITLE: Replace with your article title]</h1>
+                <div class="article-meta">
+                    <span>📅 [DATE: e.g., January 5, 2025]</span>
+                    <span>⏱️ [READING TIME: e.g., 5 min read]</span>
+                    <span>✍️ Sukrit Dass TM</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <!-- Your article content goes here -->
+            <p>[INTRODUCTION]</p>
+
+            <h2>[SECTION HEADING]</h2>
+            <p>[CONTENT]</p>
+
+            <div class="highlight-box">
+                <strong>💡 KEY INSIGHT</strong>
+                [Highlight text]
+            </div>
+
+            <!-- Add more sections as needed -->
+
+            <div class="tags">
+                <span class="tag">TAG1</span>
+                <span class="tag">TAG2</span>
+                <span class="tag">TAG3</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Sukrit Dass Thirukonda Muralidoss. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
